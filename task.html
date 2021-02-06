@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devil
+
+    </title>
+    <style>
+        * {
+            background: black;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <marquee behavior="" direction="left">
+        <h1>Vishal</h1>
+    </marquee>
+    <input type="text" onkeyup="search(this.value)">
+    <ul id="list">
+        <li>
+            <a href="">one</a>
+        </li>
+        <li>
+            <a href="">Two</a>
+        </li>
+        <li>
+            <a href="">Three</a>
+        </li>
+        <li>
+            <a href="">Four</a>
+        </li>
+        <li>
+            <a href="">Five</a>
+        </li>
+        <li>
+            <a href="">Six</a>
+        </li>
+    </ul>
+
+    <script>
+        const search = (key_word) => {
+            let key = key_word.toUpperCase();
+            let list = document.getElementById('list');
+            let list_items = list.querySelectorAll('li');
+
+            for (var i = 0; i <= list_items.length; i++) {
+                let data = list_items[i].textContent;
+                if (data.toUpperCase().indexOf(key) > -1) {
+                    list_items[i].style.display = '';
+                } else {
+                    list_items[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
